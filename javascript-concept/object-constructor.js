@@ -11,3 +11,6 @@ function Book(title, author, numPages, read) {
 
 let theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
 console.log(theHobbit.info());
+
+// checking for the prototypes of an object
+console.log(Object.getPrototypeOf(theHobbit) === Book.prototype);
