@@ -8,14 +8,8 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-/*function addBookToLibrary(title, author, pages, read) {
-  // this will add the book and push it to the mylibrary array
-  const newBook = new Book(title, author, pages, read);
-  myLibrary.push(newBook);
-  displayBooks();
-}
 
-*/
+
 function addBookToLibrary(book){
     if (book instanceof Book) {
         if (book.title !== '' && book.author !== '' && book.pages !== '') {
@@ -85,12 +79,11 @@ function createBookCard(book, index) {
 
     return bookCard;
 }
-// this is used to get the form value and add it to the library
-/*document.getElementById('new-book-form').addEventListener('submit', function(event){
+//document.getElementById('new-book-form').addEventListener('submit', function(event){
     // normally the form should save into the database
     // but prevent the default action and let my add library
     // do the work
-    event.preventDefault();
+ /*   event.preventDefault();
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value; // fixed typo here
@@ -151,8 +144,24 @@ document.getElementById('book-form').addEventListener('submit', event => {
     dialog.close();
 });
 
-const book1 = new Book('The Prince', 'Niccolo Machiavelli', 231, "no");
-const book2 = new Book('The Alchemist', 'Paulo Coelho', 195, "yes");
+const book1 = new Book('The Prince', 'Niccolò Machiavelli', 231, Math.random() < 0.5 ? 'yes' : 'no');
+const book2 = new Book('The Alchemist', 'Paulo Coelho', 195, Math.random() < 0.5 ? 'yes' : 'no');
+const book3 = new Book('To Kill a Mockingbird', 'Harper Lee', 281, Math.random() < 0.5 ? 'yes' : 'no');
+const book4 = new Book('1984', 'George Orwell', 328, Math.random() < 0.5 ? 'yes' : 'no');
+const book5 = new Book('Pride and Prejudice', 'Jane Austen', 279, Math.random() < 0.5 ? 'yes' : 'no');
+const book6 = new Book('The Great Gatsby', 'F. Scott Fitzgerald', 180, Math.random() < 0.5 ? 'yes' : 'no');
+const book7 = new Book('To the Lighthouse', 'Virginia Woolf', 236, Math.random() < 0.5 ? 'yes' : 'no');
+const book8 = new Book('The Catcher in the Rye', 'J.D. Salinger', 224, Math.random() < 0.5 ? 'yes' : 'no');
+const book9 = new Book('Moby-Dick', 'Herman Melville', 704, Math.random() < 0.5 ? 'yes' : 'no');
+const book10 = new Book('The Odyssey', 'Homer', 384, Math.random() < 0.5 ? 'yes' : 'no');
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
+addBookToLibrary(book3);
+addBookToLibrary(book4);
+addBookToLibrary(book5);
+addBookToLibrary(book6);
+addBookToLibrary(book7);
+addBookToLibrary(book8);
+addBookToLibrary(book9);
+addBookToLibrary(book10);
